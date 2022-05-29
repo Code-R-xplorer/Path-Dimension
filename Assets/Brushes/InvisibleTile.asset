@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InvisibleTile
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_GameObject: {fileID: 4300273312213708989, guid: cf940c4d379f999408e93b8e03e752b8, type: 3}
+  - m_GameObject: {fileID: 385858950377863215, guid: dd3b7a74745d5584790b03b53aafb46f, type: 3}
     m_Offset: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     m_Orientation: {x: 0, y: 0, z: 0, w: 1}

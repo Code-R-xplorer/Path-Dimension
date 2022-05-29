@@ -11,12 +11,13 @@ public class InvisibleTile : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        GameManager.Instance.onToggleTiles += ShowTile;
+       
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.onToggleTiles += ShowTile;
         _animator.Play("FadeOut",0,0f);
     }
 

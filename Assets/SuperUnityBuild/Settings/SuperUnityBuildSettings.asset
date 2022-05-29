@@ -56,7 +56,10 @@ MonoBehaviour:
       customDefines: 
       sceneList:
         enabledScenes:
+        - fileGUID: bfc61a45b57350c45b608e33c510b350
         - fileGUID: 3465be7d71e4296409afa45be094a33b
+        - fileGUID: b66b74dac64f01c439d5179bfaa32a82
+        - fileGUID: cf2394569d53c8f44b7cca5eb273b0e0
   _platformList:
     platforms:
     - {fileID: -4396839482937809714}
