@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private Vector3 movement;
     private Vector3 look;
     [SerializeField] private MouseLook _mouseLook;
+    private Vector3 _playerSpawnPos;
 
     
 
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     {
         _playerControls = new PlayerControls();
         _rigidbody = GetComponent<Rigidbody>();
+        _playerSpawnPos = GameObject.Find("PlayerSpawn").transform.position;
     }
 
     void Start()
@@ -37,6 +39,10 @@ public class Player : MonoBehaviour
     {
         movement = new Vector3(moveDirection.x, 0, moveDirection.y);
         _mouseLook.ReceiveInput(lookDirection);
+        if (transform.position.y < -5)
+        {
+            transform.position = _playerSpawnPos;
+        }
     }
 
     private void FixedUpdate()

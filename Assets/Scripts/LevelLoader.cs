@@ -12,8 +12,16 @@ public class LevelLoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.SaveCurrentLevel(nextLevel);
-            SceneManager.LoadScene("Level_" + nextLevel);
+            if (nextLevel == 4)
+            {
+                GameManager.Instance.SaveCurrentLevel(nextLevel);
+                SceneManager.LoadScene("Level_Selection");
+            }
+            else
+            {
+                GameManager.Instance.SaveCurrentLevel(nextLevel);
+                SceneManager.LoadScene("Level_" + nextLevel);
+            }
         }
     }
 }
