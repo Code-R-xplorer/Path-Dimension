@@ -17,7 +17,7 @@ public class InvisibleTile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _animator.Play("FadeOut",1,0f);
+        _animator.Play("FadeOut",0,0f);
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class InvisibleTile : MonoBehaviour
     {
         if (hidden)
         {
-            _animator.Play("FadeIn", 1, 0f);
+            _animator.Play("FadeIn", 0, 0f);
             StartCoroutine(TileCooldown(tileShowTime));
         }
     }
@@ -39,7 +39,7 @@ public class InvisibleTile : MonoBehaviour
     {
         hidden = false;
         yield return new WaitForSeconds(wait);
-        _animator.Play("FadeOut",1,0f);
+        _animator.Play("FadeOut",0,0f);
         hidden = true;
 
 
